@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM  from 'react-dom'
 import Movie from './components/Movie.jsx'
+import Search from './components/Search.jsx'
 
 
 class MovieList extends React.Component {
@@ -17,9 +18,20 @@ class MovieList extends React.Component {
     }
   }
 
+  search() {
+  	// search functionality to search through movie list
+  }
+
   render() {
     return (
-      <Movie movies={this.state.movies} />
+      <div>
+        <div id="navbar">
+          <Search />
+        </div>
+        <div>
+          <Movie movies={this.state.movies} />
+        </div>
+      </div>
     )
   }
 }
