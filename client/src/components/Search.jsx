@@ -5,18 +5,21 @@ class Search extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-  
+      searchTerm: ''
     }
     this.handleOnChange = this.handleOnChange.bind(this)
     this.handleOnSubmit = this.handleOnSubmit.bind(this)
   }
 
-  handleOnChange() {
-
+  handleOnChange(event) {
+    this.setState({
+      searchTerm: event.target.value
+    })
   }
 
-  handleOnSubmit() {
-
+  handleOnSubmit(event) {
+    this.props.search(this.state.searchTerm)
+    event.preventDefault()
   }
 
   render() {

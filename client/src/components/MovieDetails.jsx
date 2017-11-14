@@ -10,10 +10,13 @@ class MovieDetails extends React.Component {
   }
 
   render() {
+  	const movieStyle = {
+  		border: '1px solid gray',
+  		margin: '5px',
+  		textAlign: 'center'
+  	}
     return (
-      <div>
-        <p>{this.props.movie.title}</p>
-      </div>
+      <div style={movieStyle}>{this.props.movie.title}</div>
     )
   }
 }

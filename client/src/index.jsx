@@ -18,8 +18,9 @@ class MovieList extends React.Component {
     }
   }
 
-  search() {
+  search(searchTerm) {
   	// search functionality to search through movie list
+  	console.log('searchTerm: ', searchTerm)
   }
 
   render() {
